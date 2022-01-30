@@ -18,7 +18,7 @@ public class 分割回文串 {
     List<List<String>> result = new ArrayList<>();
 
     public List<List<String>> partition(String s) {
-
+        return new ArrayList<>();
     }
 
     public void backTracking(String s,int startIndex){
