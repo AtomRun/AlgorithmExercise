@@ -21,8 +21,16 @@ public class Combinations {
     /**
      * 给定两个整数 n 和 k，返回 1 ... n 中所有可能的 k 个数的组合。
      */
-    static List<List<Integer>> result = new ArrayList<>();//存放符合条件结果的集合
-    static Deque<Integer> path = new ArrayDeque<>();//存放符合条件的结果
+
+    /**
+     * 存放符合条件结果的集合
+     */
+    static List<List<Integer>> result = new ArrayList<>();
+
+    /**
+     * 存放符合条件的结果
+     */
+    static Deque<Integer> path = new ArrayDeque<>();
 
     public static List<List<Integer>> combine(int n, int k) {
 
@@ -35,18 +43,18 @@ public class Combinations {
         //1. 递归函数的参数和返回值
         //2. 递归的终止条件
         //3. 确定单层递归的逻辑
-        backTracking(n,k,1);
+        backTracking(n, k, 1);
         return result;
     }
 
     public static void backTracking(int n, int k, int startIndex) {
-        if (path.size()==k){
+        if (path.size() == k) {
             result.add(new ArrayList<>(path));
             return;
         }
-        for (int i = startIndex; i <= n-(k-path.size()); i++) {
+        for (int i = startIndex; i <= n - (k - path.size()); i++) {
             path.push(i);
-            backTracking(n,k,i+1);
+            backTracking(n, k, i + 1);
             path.pop();
         }
     }
