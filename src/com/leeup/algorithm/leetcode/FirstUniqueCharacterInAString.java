@@ -16,9 +16,11 @@ public class FirstUniqueCharacterInAString {
     }
 
     public int firstUniqChar1(String s) {
-        for (int i = 0; i < s.length(); i++)
-            if (s.indexOf(s.charAt(i)) == s.lastIndexOf(s.charAt(i)))
+        for (int i = 0; i < s.length(); i++) {
+            if (s.indexOf(s.charAt(i)) == s.lastIndexOf(s.charAt(i))) {
                 return i;
+            }
+        }
         return -1;
     }
 
@@ -26,8 +28,8 @@ public class FirstUniqueCharacterInAString {
 
         char[] charArray = s.toCharArray();
         Map<Character, Integer> map = new HashMap<>();
-        for (int i = 0; i < charArray.length; i++) {
-            map.put(charArray[i], map.getOrDefault(charArray[i], 0) + 1);
+        for (char c : charArray) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
         }
         for (int i = 0; i < charArray.length; i++) {
             if (map.get(charArray[i]) == 1){
