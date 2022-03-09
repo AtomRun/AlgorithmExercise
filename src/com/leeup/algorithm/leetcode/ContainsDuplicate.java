@@ -14,17 +14,18 @@ public class ContainsDuplicate {
 
     /**
      * HashSet不重复
+     *
      * @param nums
      * @return
      */
     public boolean containsDuplicate(int[] nums) {
-        if (nums.length<2){
+        if (nums.length < 2) {
             return false;
         }
         HashSet set = new HashSet();
-        for (int num : nums){
+        for (int num : nums) {
             set.add(num);
         }
-        return set.size()==nums.length;
+        return set.size() == nums.length;
     }
 }

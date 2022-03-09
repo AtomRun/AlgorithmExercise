@@ -38,7 +38,7 @@ public class Merge_Sort {
 
         merge_sort(q, l, mid);
         merge_sort(q, mid + 1, r);
-        int[] temp = new int[r-l+1];
+        int[] temp = new int[r - l + 1];
         int k = 0, i = l, j = mid + 1;
         while (i <= mid && j <= r) {
             if (q[i] <= q[j]) {
@@ -53,7 +53,7 @@ public class Merge_Sort {
         while (j <= r) {
             temp[k++] = q[j++];
         }
-        for (i = l, j = 0; i <= r; i++,j++) {
+        for (i = l, j = 0; i <= r; i++, j++) {
             q[i] = temp[j];
         }
     }

@@ -24,8 +24,9 @@ public class combinationSumIII {
 
     public void backTracking(int targetNum, int k,int sum,int startIndex) {
         if (path.size() == k) {
-            if (sum == targetNum)
+            if (sum == targetNum) {
                 result.add(new ArrayList<>(path));
+            }
             return;
         }
         for (int i = startIndex; i <= 9; i++) {

@@ -1,7 +1,5 @@
 package com.leeup.algorithm.acwing.topic;
 
-import java.util.List;
-
 /**
  * @ClassName 反转链表
  * @Description TODO
