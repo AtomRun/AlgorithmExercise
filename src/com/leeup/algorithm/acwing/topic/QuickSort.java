@@ -16,9 +16,11 @@ public class QuickSort {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
         //几个数字
-        int n = Integer.parseInt(input.readLine());
+
+        String s1 = input.readLine();
+        String[] s = s1.split(" ");
+        int n = s.length;
         int[] arr = new int[n];
-        String[] s = input.readLine().split(" ");
         for (int i = 0; i < n; i++) {
             arr[i] = Integer.parseInt(s[i]);
         }
@@ -45,16 +47,50 @@ public class QuickSort {
                 i++;
             }
             while (q[i] < x);
+
             do {
                 j--;
             }
             while (q[j] > x);
+
+
             if (i < j) {
                 int temp = q[i];
                 q[i] = q[j];
                 q[j] = temp;
             }
         }
+        quick_sort(q, l, j);
+        quick_sort(q, j + 1, r);
+    }
+
+    public static void quickSort(int q[], int l, int r) {
+        if (l >= r) {
+            return;
+        }
+
+        int i = l - 1;
+        int j = r + 1;
+
+        int x = q[(l + r) >> 1];
+
+        while (i < j) {
+            do {
+                i++;
+            }
+            while (q[i] < x);
+            do {
+                j--;
+            }
+            while (q[j] > x);
+
+            if (i < j) {
+                int temp = q[i];
+                q[i] = q[j];
+                q[j] = temp;
+            }
+        }
+
         quick_sort(q, l, j);
         quick_sort(q, j + 1, r);
     }
