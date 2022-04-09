@@ -31,24 +31,31 @@ public class 单链表 {
         int n = scanner.nextInt();
         while (n-- > 0) {
             String operate = scanner.next();
-            if (operate.equals("H")) {
-                // H x，表示向链表头插入一个数 x
-                int x = scanner.nextInt();
-                insertHead(x);
-            } else if (operate.equals("D")) {
-                int k = scanner.nextInt();
-                if (k == 0) {
-                    // 删除头节点，指向head的next
-                    head = ne[head];
-                } else {
-                    // 从0开始插入，所以需要k-1
-                    delete(k - 1);
+            switch (operate) {
+                case "H": {
+                    // H x，表示向链表头插入一个数 x
+                    int x = scanner.nextInt();
+                    insertHead(x);
+                    break;
                 }
-            } else if (operate.equals("I")) {
-                int k = scanner.nextInt();
-                int x = scanner.nextInt();
-                // 从0开始插入，所以需要k-1
-                insert(k - 1, x);
+                case "D": {
+                    int k = scanner.nextInt();
+                    if (k == 0) {
+                        // 删除头节点，指向head的next
+                        head = ne[head];
+                    } else {
+                        // 从0开始插入，所以需要k-1
+                        delete(k - 1);
+                    }
+                    break;
+                }
+                case "I": {
+                    int k = scanner.nextInt();
+                    int x = scanner.nextInt();
+                    // 从0开始插入，所以需要k-1
+                    insert(k - 1, x);
+                    break;
+                }
             }
         }
 
