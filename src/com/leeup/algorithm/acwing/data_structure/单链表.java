@@ -20,7 +20,7 @@ public class 单链表 {
     public static int[] e = new int[N];
     // 记录链表某个节点的下一个节点的指针
     public static int[] ne = new int[N];
-    // head是头指针，我理解的就是head的next
+    // head是指向头节点的指针
     public static int head = -1;
     // 表示当前用到了哪个点？或者说下标、指针、地址
     public static int idx = 0;
@@ -60,9 +60,16 @@ public class 单链表 {
         }
     }
 
+    // 在第一个节点之前插入一个新节点，然后把head指针指向新的头节点
     public static void insertHead(int x) {
+        /*
+        如果把head理解为头节点的next就很好理解了，
+        1. ne[idx] = head 表示新节点的next指向头节点的next
+        2. head = idx     表示头节点的next等于新节点
+        这样一来就能在第一个节点之前插入一个新节点了
+         */
         e[idx] = x;
-        // head.next = 新节点
+        // 新节点next 指向 head
         ne[idx] = head;
         head = idx;
         idx++;
