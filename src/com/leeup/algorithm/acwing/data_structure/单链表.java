@@ -38,7 +38,7 @@ public class 单链表 {
             } else if (operate.equals("D")) {
                 int k = scanner.nextInt();
                 if (k == 0) {
-                    // 删除头节点，指向自己
+                    // 删除头节点，指向head的next
                     head = ne[head];
                 } else {
                     // 从0开始插入，所以需要k-1
