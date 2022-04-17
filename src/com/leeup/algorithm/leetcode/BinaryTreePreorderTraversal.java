@@ -17,39 +17,44 @@ public class BinaryTreePreorderTraversal {
 
         List<Integer> integers = new ArrayList<>(0);
 
-        if (root==null){
+        if (root == null) {
             return integers;
         }
         List<Integer> res = new ArrayList<>();
-        preorder(root,res);
+        preorder(root, res);
         return res;
     }
 
-    public static void preorder(TreeNode root,List<Integer> list){
-        if (root==null){
+    public static void preorder(TreeNode root, List<Integer> list) {
+        if (root == null) {
             return;
         }
         list.add(root.val);
-        preorder(root.left,list);
-        preorder(root.right,list);
+        preorder(root.left, list);
+        preorder(root.right, list);
+    }
+
+    /**
+     * =============================================================
+     **/
+
+    public List<Integer> inorderTraversal1(TreeNode root) {
+        if (root == null) {
+            return new ArrayList<>();
+        }
+
+        List<Integer> res = new ArrayList<>();
+        middleOrder(root, res);
+        return res;
+    }
+
+    public void middleOrder(TreeNode root, List<Integer> list) {
+        if (root == null) {
+            return;
+        }
+        middleOrder(root.left, list);
+        list.add(root.val);
+        middleOrder(root.right, list);
     }
 }
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-}
