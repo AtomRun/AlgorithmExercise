@@ -10,9 +10,8 @@ package com.leeup.algorithm.leetcode;
 public class FindNumbers {
 
     public static void main(String[] args) {
-        System.out.println(findNumbers1(new int[]{12,345,2,6,7896}));
+        System.out.println(findNumbers1(new int[]{12, 345, 2, 6, 7896}));
     }
-
 
 
     public static int findNumbers1(int[] nums) {
@@ -21,7 +20,7 @@ public class FindNumbers {
 
         for (int i = 0; i < nums.length; i++) {
             String temp = String.valueOf(nums[i]);
-            if (temp.length()%2==0){
+            if (temp.length() % 2 == 0) {
                 result++;
             }
         }
@@ -40,32 +39,32 @@ public class FindNumbers {
         for (int i = 0; i < nums.length; i++) {
 
             if (nums[i] >= 1000) {
-                ge = nums[i]%10;
-                shi = nums[i]/10%10;
-                bai = nums[i]/100%10;
-                qian =nums[i]/1000;
-                if (ge%2==0||shi%2==0||bai%2==0||qian%2==0){
+                ge = nums[i] % 10;
+                shi = nums[i] / 10 % 10;
+                bai = nums[i] / 100 % 10;
+                qian = nums[i] / 1000;
+                if (ge % 2 == 0 || shi % 2 == 0 || bai % 2 == 0 || qian % 2 == 0) {
                     result++;
                 }
             }
             if (nums[i] >= 100 && nums[i] < 1000) {
-                ge = nums[i]%10;
-                shi = nums[i]/10%10;
-                bai = nums[i]/100%10;
-                if (ge%2==0||shi%2==0||bai%2==0){
+                ge = nums[i] % 10;
+                shi = nums[i] / 10 % 10;
+                bai = nums[i] / 100 % 10;
+                if (ge % 2 == 0 || shi % 2 == 0 || bai % 2 == 0) {
                     result++;
                 }
             }
             if (nums[i] >= 10 && nums[i] < 100) {
-                ge = nums[i]%10;
-                shi = nums[i]/10%10;
-                if (ge%2==0||shi%2==0){
+                ge = nums[i] % 10;
+                shi = nums[i] / 10 % 10;
+                if (ge % 2 == 0 || shi % 2 == 0) {
                     result++;
                 }
             }
             if (nums[i] >= 1 && nums[i] < 10) {
-                ge = nums[i]%10;
-                if (ge%2==0){
+                ge = nums[i] % 10;
+                if (ge % 2 == 0) {
                     result++;
                 }
             }

@@ -8,6 +8,7 @@ package com.leeup.algorithm.leetcode;
  * @Version 1.0
  **/
 public class IntersectionOfTwoArraysII {
+
     public int[] intersect(int[] nums1, int[] nums2) {
         return null;
     }

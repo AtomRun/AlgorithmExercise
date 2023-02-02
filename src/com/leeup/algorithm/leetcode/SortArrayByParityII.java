@@ -11,18 +11,18 @@ public class SortArrayByParityII {
 
 
     public int[] sortArrayByParityII1(int[] A) {
-        int [] result = new int[A.length];
+        int[] result = new int[A.length];
 
         int ji = 1;
         int ou = 0;
 
         for (int i = 0; i < A.length; i++) {
-            if (A[i] % 2==0){
+            if (A[i] % 2 == 0) {
                 result[ou] = A[i];
-                ou+=2;
-            }else {
+                ou += 2;
+            } else {
                 result[ji] = A[i];
-                ji+=2;
+                ji += 2;
             }
         }
         return result;
@@ -41,10 +41,10 @@ public class SortArrayByParityII {
         }
 
         i = 1;
-        for (int num : A){
-            if (num%2!=0){
+        for (int num : A) {
+            if (num % 2 != 0) {
                 temp[i] = num;
-                i+=2;
+                i += 2;
             }
         }
         return temp;

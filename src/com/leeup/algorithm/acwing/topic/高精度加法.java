@@ -1,6 +1,7 @@
 package com.leeup.algorithm.acwing.topic;
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.IOException;
 import java.math.BigInteger;
 import java.util.Scanner;
 
@@ -19,7 +20,7 @@ public class 高精度加法 {
         BigInteger b = scanner.nextBigInteger();
         BigInteger[] bigIntegers = a.divideAndRemainder(b);
         System.out.println(bigIntegers[0]);
-        if (bigIntegers[1]!=null){
+        if (bigIntegers[1] != null) {
             System.out.println(bigIntegers[1]);
         }
         scanner.close();

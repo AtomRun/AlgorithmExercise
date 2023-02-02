@@ -30,7 +30,7 @@ public class 子数组的和 {
             String[] s2 = in.readLine().split(" ");
 
             for (int j = 1; j <= m; j++) {
-                s[i][j] = Integer.parseInt(s2[j-1]);
+                s[i][j] = Integer.parseInt(s2[j - 1]);
             }
         }
         for (int i = 1; i <= n; i++) {

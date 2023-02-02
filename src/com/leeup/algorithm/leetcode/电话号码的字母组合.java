@@ -19,26 +19,26 @@ public class 电话号码的字母组合 {
 
 
     public List<String> letterCombinations(String digits) {
-        if (digits==null||digits.length()==0){
+        if (digits == null || digits.length() == 0) {
             return new ArrayList<>();
         }
-        backTracking(digits,new StringBuilder(),0);
+        backTracking(digits, new StringBuilder(), 0);
         return result;
     }
 
-    void backTracking(String str,StringBuilder letter,int index){
-        if (index == str.length()){
+    void backTracking(String str, StringBuilder letter, int index) {
+        if (index == str.length()) {
             result.add(s);
             return;
         }
 
         char c = str.charAt(index);
-        int pos = c-'0';
+        int pos = c - '0';
         String map_string = letterMap[pos];
         for (int i = 0; i < str.length(); i++) {
             letter.append(map_string.charAt(i));
-            backTracking(str, letter, index+1);
-            letter.deleteCharAt(letter.length()-1);
+            backTracking(str, letter, index + 1);
+            letter.deleteCharAt(letter.length() - 1);
         }
     }
 }

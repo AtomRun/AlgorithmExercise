@@ -11,7 +11,7 @@ public abstract class Abstract {
 
     private int a;
 
-    public int  ab (){
+    public int ab() {
         return 0;
     }
 }

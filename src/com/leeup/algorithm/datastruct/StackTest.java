@@ -19,7 +19,7 @@ public class StackTest {
         stack.push(3);
         System.out.println(stack.peek());//返回最上面的元素
         System.out.println(stack.pop());//最上面的3去掉
-        System.out.println(stack.toString());//toString
+        System.out.println(stack);//toString
         System.out.println(stack.size());//size
     }
 }

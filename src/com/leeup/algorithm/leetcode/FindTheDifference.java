@@ -1,10 +1,5 @@
 package com.leeup.algorithm.leetcode;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @ClassName FindTheDifference
  * @Description TODO
@@ -22,10 +17,10 @@ public class FindTheDifference {
     public static char findTheDifference2(String s, String t) {
         int diff = 0;
         for (int i = 0; i < s.length(); i++) {
-            diff+= s.charAt(i);
+            diff += s.charAt(i);
         }
         for (int i = 0; i < t.length(); i++) {
-            diff+= t.charAt(i);
+            diff += t.charAt(i);
         }
         return (char) diff;
     }

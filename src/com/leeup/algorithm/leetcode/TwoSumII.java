@@ -17,11 +17,11 @@ public class TwoSumII {
 
     public int[] twoSum(int[] numbers, int target) {
         int l = 0;
-        int r = numbers.length-1;
-        while (l<r){
-            if (target-numbers[l]==numbers[r]){
-                return new int []{l,r};
-            }else {
+        int r = numbers.length - 1;
+        while (l < r) {
+            if (target - numbers[l] == numbers[r]) {
+                return new int[]{l, r};
+            } else {
                 l++;
             }
         }

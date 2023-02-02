@@ -16,7 +16,6 @@ public class MergeIntervals {
 
     public int[][] merge(int[][] intervals) {
 
-
         List<int[]> result = new ArrayList<>();
         if (intervals.length == 0) {
             return intervals;
@@ -31,10 +30,9 @@ public class MergeIntervals {
                 //interval[0]，即开始的元素，类似[1,3]的1
                 //result.get(result.size()-1)[1] 即类似[6,7]的7
                 result.add(interval);//两者不重叠，添加到result中
-            }
-            else {
+            } else {
                 //将result的最后一位和interval的的最后一位比较取最大，并且设置为result的最后一位
-                result.get(result.size()-1)[1] = Math.max(result.get(result.size()-1)[1],interval[1]);
+                result.get(result.size() - 1)[1] = Math.max(result.get(result.size() - 1)[1], interval[1]);
             }
         }
         return result.toArray(new int[result.size()][2]);

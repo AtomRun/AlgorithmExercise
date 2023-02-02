@@ -1,8 +1,6 @@
 package com.leeup.algorithm.leetcode;
 
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * @ClassName MajorityElement
@@ -16,7 +14,7 @@ public class MajorityElement {
 
     public int majorityElement1(int[] nums) {
         Arrays.sort(nums);
-        return nums[nums.length/2];
+        return nums[nums.length / 2];
     }
 
     public int majorityElement(int[] nums) {

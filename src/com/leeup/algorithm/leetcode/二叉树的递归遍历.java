@@ -12,22 +12,22 @@ import java.util.List;
  **/
 public class 二叉树的递归遍历 {
 
-    public List<Integer> getTreeKey(TreeNode root){
-         List<Integer> returnElement = new ArrayList<>();
-         if (root==null){
-             return returnElement;
-         }
-         List<Integer> result = new ArrayList<>();
-         treeIterator(root,result);
-         return result;
+    public List<Integer> getTreeKey(TreeNode root) {
+        List<Integer> returnElement = new ArrayList<>();
+        if (root == null) {
+            return returnElement;
+        }
+        List<Integer> result = new ArrayList<>();
+        treeIterator(root, result);
+        return result;
     }
 
     private void treeIterator(TreeNode root, List<Integer> result) {
-        if (root==null){
+        if (root == null) {
             return;
         }
         result.add(root.val);
-        treeIterator(root.left,result);
-        treeIterator(root.right,result);
+        treeIterator(root.left, result);
+        treeIterator(root.right, result);
     }
 }

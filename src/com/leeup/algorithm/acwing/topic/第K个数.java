@@ -15,8 +15,7 @@ public class 第K个数 {
 
     static final int N = 100010;
     //static final int[] q = new int[N];
-    static final int[] q = new int[] {2,4,1,5,3};
-
+    static final int[] q = new int[]{2, 4, 1, 5, 3};
 
 
     public static void main(String[] args) throws IOException {
@@ -50,8 +49,10 @@ public class 第K个数 {
 
         //排序
         while (i < j) {
-            while (q[++i] < x) ;
-            while (q[--j] > x) ;
+            while (q[++i] < x)
+                ;
+            while (q[--j] > x)
+                ;
             if (i <= j) {
                 int temp = q[i];
                 q[i] = q[j];
@@ -60,8 +61,9 @@ public class 第K个数 {
         }
         //sl 左边的个数，k的大小和左边相比，如果小于左边，那就在左半边排序。
         int sl = j - l + 1;
-        if (k <= sl)
+        if (k <= sl) {
             return quick_sort(l, j, k);
+        }
         return quick_sort(j + 1, r, k - sl);
     }
 }

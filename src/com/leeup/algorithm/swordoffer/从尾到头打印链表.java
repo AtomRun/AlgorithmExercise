@@ -1,7 +1,6 @@
 package com.leeup.algorithm.swordoffer;
 
 import java.util.Stack;
-import java.util.TreeMap;
 
 /**
  * @ClassName 从尾到头打印链表
@@ -22,7 +21,7 @@ public class 从尾到头打印链表 {
             temp = temp.next;
         }
         int n = stk.size();
-        int [] res = new int [n];
+        int[] res = new int[n];
         for (int i = 0; i < n; i++) {
             res[i] = stk.pop().val;
         }
@@ -46,6 +45,7 @@ public class 从尾到头打印链表 {
 
 
     class ListNode {
+
         int val;
         ListNode next;
 

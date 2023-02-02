@@ -5,6 +5,7 @@ package com.leeup.algorithm.leetcode;
  * @date 2022/4/7 12:34
  */
 public class 旋转字符串796 {
+
     public boolean rotateString(String s, String goal) {
 
         char[] chars = s.toCharArray();

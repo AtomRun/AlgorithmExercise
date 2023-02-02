@@ -12,6 +12,7 @@ import java.io.InputStreamReader;
  * @Version 1.0
  **/
 public class QuickSort {
+
     public static void main(String[] args) throws IOException {
         BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
@@ -32,7 +33,7 @@ public class QuickSort {
         }
     }
 
-    public static void quick_sort(int q[], int l, int r) {
+    public static void quick_sort(int[] q, int l, int r) {
         if (l >= r) {
             return;
         }
@@ -53,7 +54,6 @@ public class QuickSort {
             }
             while (q[j] > x);
 
-
             if (i < j) {
                 int temp = q[i];
                 q[i] = q[j];
@@ -64,7 +64,7 @@ public class QuickSort {
         quick_sort(q, j + 1, r);
     }
 
-    public static void quickSort(int q[], int l, int r) {
+    public static void quickSort(int[] q, int l, int r) {
         if (l >= r) {
             return;
         }

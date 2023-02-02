@@ -2,7 +2,6 @@ package com.leeup.algorithm.leetcode;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * @ClassName FindMajorityElementLcci
@@ -14,34 +13,34 @@ import java.util.Set;
 public class FindMajorityElementLcci {
 
     public static void main(String[] args) {
-        System.out.println(majorityElement1(new int[]{2,2,1,1,1,2,2}));
+        System.out.println(majorityElement1(new int[]{2, 2, 1, 1, 1, 2, 2}));
     }
 
     public static int majorityElement1(int[] nums) {
 
         int times = 1;
 
-        int mid = nums.length/2;
+        int mid = nums.length / 2;
 
-        Map<Integer,Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
 
         for (int i = 0; i < nums.length; i++) {
-            if (map.containsKey(nums[i])){
+            if (map.containsKey(nums[i])) {
                 times++;
             }
-            map.put(nums[i],times);
+            map.put(nums[i], times);
         }
-        map.forEach((k,v)->{
-            System.out.println(k+"-----"+v);
+        map.forEach((k, v) -> {
+            System.out.println(k + "-----" + v);
         });
 
         int temp = 0;
 
-        for(int key : map.keySet()){
+        for (int key : map.keySet()) {
             Integer value = map.get(key);
-            temp = temp>value?temp:value;
+            temp = temp > value ? temp : value;
 
-            if (temp>mid){
+            if (temp > mid) {
                 return key;
                 //todo 如何拿到最后面的key，不让满足条件的提前返回
             }
@@ -69,8 +68,12 @@ public class FindMajorityElementLcci {
         int t = nums.length / 2 + 1;
         count = 0;
         for (int num : nums) {
-            if (num == temp) count++;
-            if (count == t) return temp;
+            if (num == temp) {
+                count++;
+            }
+            if (count == t) {
+                return temp;
+            }
         }
         return -1;
     }

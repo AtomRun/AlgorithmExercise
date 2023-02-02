@@ -11,6 +11,7 @@ import java.util.PriorityQueue;
  * @Version 1.0
  **/
 public class HeapTest {
+
     public static void main(String[] args) {
         PriorityQueue<Integer> minPq = new PriorityQueue<>();
         PriorityQueue<Integer> maxPq = new PriorityQueue<>(Collections.reverseOrder());

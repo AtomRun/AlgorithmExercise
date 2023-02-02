@@ -8,6 +8,7 @@ package com.leeup.algorithm.swordoffer;
  * @Version 1.0
  **/
 public class 把数组排成最小的数 {
+
     public String minNumber(int[] nums) {
         return null;
     }

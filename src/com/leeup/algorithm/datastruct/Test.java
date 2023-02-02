@@ -10,6 +10,8 @@ package com.leeup.algorithm.datastruct;
 public interface Test {
 
     void methodA();
+
     void methodA2();
+
     void methodA3();
 }

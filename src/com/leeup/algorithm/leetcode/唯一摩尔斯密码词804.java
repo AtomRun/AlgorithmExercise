@@ -5,6 +5,7 @@ package com.leeup.algorithm.leetcode;
  * @date 2022/4/10 11:03
  */
 public class 唯一摩尔斯密码词804 {
+
     public static void main(String[] args) {
 
     }

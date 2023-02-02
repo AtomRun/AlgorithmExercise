@@ -21,13 +21,13 @@ public class 分割回文串 {
         return new ArrayList<>();
     }
 
-    public void backTracking(String s,int startIndex){
-        if (startIndex>=s.length()){
+    public void backTracking(String s, int startIndex) {
+        if (startIndex >= s.length()) {
             result.add(new ArrayList<>(path));
             return;
         }
-        for (int i = startIndex; i < s.length() ; i++) {
-            
+        for (int i = startIndex; i < s.length(); i++) {
+
         }
     }
 

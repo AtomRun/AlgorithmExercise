@@ -11,7 +11,7 @@ public interface Interface {
 
     Integer a = 0;
 
-    public default int ab(){
-        return  1;
+    default int ab() {
+        return 1;
     }
 }

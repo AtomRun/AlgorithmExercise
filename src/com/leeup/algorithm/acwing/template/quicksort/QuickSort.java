@@ -9,7 +9,7 @@ package com.leeup.algorithm.acwing.template.quicksort;
  **/
 public class QuickSort {
 
-    public static void quickSort(int q[], int l, int r) {
+    public static void quickSort(int[] q, int l, int r) {
 
         //区间没有数，或者只有一个数，直接return
         if (l >= r) {
@@ -32,7 +32,7 @@ public class QuickSort {
                 q[j] = temp;
             }
         }
-        quickSort(q,l,j);
-        quickSort(q,j+1,r);
+        quickSort(q, l, j);
+        quickSort(q, j + 1, r);
     }
 }

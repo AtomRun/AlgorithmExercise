@@ -1,7 +1,5 @@
 package com.leeup.algorithm.leetcode;
 
-import java.util.Arrays;
-
 /**
  * @ClassName MaxConsecutiveOnes
  * @Description 485. 最大连续1的个数
@@ -10,6 +8,7 @@ import java.util.Arrays;
  * @Version 1.0
  **/
 public class MaxConsecutiveOnes {
+
     public static void main(String[] args) {
         System.out.println(findMaxConsecutiveOnes(new int[]{1, 1, 0, 1, 1, 1}));
     }
@@ -37,7 +36,7 @@ public class MaxConsecutiveOnes {
             if (nums[i] == 0) {
                 temp = Math.max(temp, mark);
                 mark = 0;
-            }else {
+            } else {
                 mark++;
             }
         }

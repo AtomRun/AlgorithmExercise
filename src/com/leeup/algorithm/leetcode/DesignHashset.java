@@ -8,6 +8,7 @@ package com.leeup.algorithm.leetcode;
  * @Version 1.0
  **/
 public class DesignHashset {
+
     public static void main(String[] args) {
         MyHashSet obj = new MyHashSet();
         obj.add(1);

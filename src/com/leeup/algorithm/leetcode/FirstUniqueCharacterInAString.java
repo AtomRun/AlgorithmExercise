@@ -11,6 +11,7 @@ import java.util.Map;
  * @Version 1.0
  **/
 public class FirstUniqueCharacterInAString {
+
     public static void main(String[] args) {
         System.out.println(firstUniqChar("loveleetcode"));
     }
@@ -32,7 +33,7 @@ public class FirstUniqueCharacterInAString {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
         for (int i = 0; i < charArray.length; i++) {
-            if (map.get(charArray[i]) == 1){
+            if (map.get(charArray[i]) == 1) {
                 return i;
             }
         }

@@ -21,6 +21,7 @@ public class SearchInsertPosition {
 
     /**
      * 遍历法
+     *
      * @param nums
      * @param target
      * @return
@@ -29,14 +30,16 @@ public class SearchInsertPosition {
 
         int i;
         for (i = 0; i < nums.length; i++) {
-            if (nums[i] >= target)
+            if (nums[i] >= target) {
                 return i;
+            }
         }
         return i;
     }
 
     /**
      * 二分法
+     *
      * @param nums
      * @param target
      * @return
@@ -45,20 +48,20 @@ public class SearchInsertPosition {
 
         //new int[]{1, 3, 5, 6}, 2
         int left = 0;
-        int right = nums.length-1;
-        while (left<right){
-            int mid = left+ (right - left )/2;
-            if (nums[mid] == target){
+        int right = nums.length - 1;
+        while (left < right) {
+            int mid = left + (right - left) / 2;
+            if (nums[mid] == target) {
                 return mid;
-            }else if (target<nums[mid]){
-                right = mid-1;
-            }else {
-                left = mid+1;
+            } else if (target < nums[mid]) {
+                right = mid - 1;
+            } else {
+                left = mid + 1;
             }
         }
         //new int[]{1, 3, 5, 6}, 2 这种情况下，mid为3，target为2，2<3 left和right直接就指向了1
         //直接return left就是错误的。所以我们在循环外判断，当循环结束的时候left一定是>=right了，所以这种情况下，
         //我们判断left指向的值是否比target的值小，如果小那就插入到left+1的地方，如果不小，那就插入到left的地方
-        return nums[left]<target?left+1:left;
+        return nums[left] < target ? left + 1 : left;
     }
 }

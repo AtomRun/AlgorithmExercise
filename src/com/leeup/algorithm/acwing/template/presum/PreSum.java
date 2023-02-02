@@ -1,7 +1,5 @@
 package com.leeup.algorithm.acwing.template.presum;
 
-import java.util.Arrays;
-
 /**
  * @ClassName PreSum
  * @Description 前缀和

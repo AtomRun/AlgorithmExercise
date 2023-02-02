@@ -48,18 +48,18 @@ public class 数的范围 {
             if (q[l] != x) {
                 System.out.print("-1 -1");
             } else {
-                System.out.print(l+" ");
+                System.out.print(l + " ");
                 l = 0;
                 r = n - 1;
-                while (l<r){
-                    int mid = (l+r >>1 )+1;
-                    if (q[mid]<=x){
+                while (l < r) {
+                    int mid = (l + r >> 1) + 1;
+                    if (q[mid] <= x) {
                         l = mid;
-                    }else {
-                        r= mid -1;
+                    } else {
+                        r = mid - 1;
                     }
                 }
-                System.out.println(l+" ");
+                System.out.println(l + " ");
             }
         }
     }

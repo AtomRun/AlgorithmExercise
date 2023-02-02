@@ -5,6 +5,7 @@ package com.leeup.algorithm.leetcode;
  * @date 2022/4/17 12:59
  */
 class TreeNode {
+
     int val;
     TreeNode left;
     TreeNode right;

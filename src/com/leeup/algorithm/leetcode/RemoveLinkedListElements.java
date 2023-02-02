@@ -1,8 +1,5 @@
 package com.leeup.algorithm.leetcode;
 
-import java.util.List;
-import java.util.Objects;
-
 /**
  * @ClassName RemoveLinkedListElements
  * @Description 203.
@@ -20,12 +17,12 @@ public class RemoveLinkedListElements {
         ListNode dummy = new ListNode(0);
         dummy.next = head;
         ListNode prev = dummy;
-        while (head!=null){
+        while (head != null) {
             //链表不为空并且不止有一个数据
-            if (head.val==val){
+            if (head.val == val) {
                 prev.next = head.next;
                 head = head.next;
-            }else {
+            } else {
                 prev = head;
                 head = head.next;
             }
@@ -34,6 +31,7 @@ public class RemoveLinkedListElements {
     }
 
     static class ListNode {
+
         int val;
         ListNode next;
 

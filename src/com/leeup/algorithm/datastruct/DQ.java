@@ -18,13 +18,13 @@ public class DQ {
         deque.add(1);
         deque.addFirst(2);
         deque.addLast(3);
-        System.out.println(deque.toString());
+        System.out.println(deque);
         System.out.println(deque.size());
         System.out.println(deque.peekFirst());
         System.out.println(deque.peekLast());
         System.out.println(deque.pollFirst());
-        System.out.println(deque.toString());
+        System.out.println(deque);
         System.out.println(deque.pollLast());
-        System.out.println(deque.toString());
+        System.out.println(deque);
     }
 }

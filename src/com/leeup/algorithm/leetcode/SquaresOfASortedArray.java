@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class SquaresOfASortedArray {
 
     public static void main(String[] args) {
-        sortedSquares1(new int[]{-4,-1,0,3,10});
+        sortedSquares1(new int[]{-4, -1, 0, 3, 10});
     }
 
     /**
@@ -25,11 +25,12 @@ public class SquaresOfASortedArray {
 
     /**
      * paixu法
+     *
      * @param A
      * @return
      */
     public int[] sortedSquares(int[] A) {
-        int [] nums =new int [A.length];
+        int[] nums = new int[A.length];
         for (int i = 0; i < A.length; i++) {
             nums[i] = A[i] * A[i];
         }

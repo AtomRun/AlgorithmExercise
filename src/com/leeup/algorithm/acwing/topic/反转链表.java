@@ -9,6 +9,37 @@ package com.leeup.algorithm.acwing.topic;
  **/
 public class 反转链表 {
 
+    public static ListNode recursionListNode(ListNode current, ListNode prev) {
+        if (null == current) {
+            return prev;
+        }
+
+        ListNode temp = current.next;
+        current.next = prev;
+        return recursionListNode(temp, current);
+    }
+
+    public ListNode reverse(ListNode current) {
+        return recursionListNode(current, null);
+    }
+
+    public static ListNode reverseListTest(ListNode head) {
+        if (null == head || null == head.next) {
+            return head;
+        }
+
+        ListNode prev = null;
+        ListNode current = head;
+        while (null != current) {
+            ListNode temp = current.next;
+            current.next = prev;
+            prev = current;
+            current = temp;
+        }
+
+        return prev;
+    }
+
     public static ListNode reverseList1(ListNode head) {
         if (head == null || head.next == null) {
             return head;

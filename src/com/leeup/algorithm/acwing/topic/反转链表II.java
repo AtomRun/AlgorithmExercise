@@ -1,7 +1,5 @@
 package com.leeup.algorithm.acwing.topic;
 
-import java.util.List;
-
 /**
  * @ClassName 反转链表II
  * @Description TODO
@@ -10,6 +8,7 @@ import java.util.List;
  * @Version 1.0
  **/
 public class 反转链表II {
+
     public static void main(String[] args) {
 
     }
@@ -21,7 +20,7 @@ public class 反转链表II {
         ListNode a = dummy;
 
         //从虚拟头节点开始走，走left-1步，就能找到left的前一个节点
-        for (int i = 0; i < left-1; i++) {
+        for (int i = 0; i < left - 1; i++) {
             a = a.next;
         }
         //循环结束a就是left前一个位置
@@ -33,7 +32,7 @@ public class 反转链表II {
             b = c;
             c = d;
         }
-        a.next.next =c;
+        a.next.next = c;
         a.next = b;
         return dummy.next;
     }

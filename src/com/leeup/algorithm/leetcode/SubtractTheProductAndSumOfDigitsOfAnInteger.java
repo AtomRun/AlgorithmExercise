@@ -16,12 +16,12 @@ public class SubtractTheProductAndSumOfDigitsOfAnInteger {
     public int subtractProductAndSum(int n) {
         int add = 0;
         int mul = 0;
-        while (n>0){
-            int digit = n%10;
+        while (n > 0) {
+            int digit = n % 10;
             n /= 10;
             add += digit;
-            mul+= digit;
+            mul += digit;
         }
-        return mul-add;
+        return mul - add;
     }
 }

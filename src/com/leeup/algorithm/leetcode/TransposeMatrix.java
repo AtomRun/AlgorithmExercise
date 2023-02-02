@@ -17,7 +17,7 @@ public class TransposeMatrix {
 
     public static int[][] transpose(int[][] A) {
 
-        int [] [] B = new int[A[0].length][A.length];
+        int[][] B = new int[A[0].length][A.length];
         //遍历二维数组，假设行i,列j
         for (int i = 0; i < A.length; i++) {
             System.out.println(Arrays.toString(A[i]));//拿到一维数组

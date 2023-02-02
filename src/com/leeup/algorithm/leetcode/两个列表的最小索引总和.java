@@ -1,8 +1,5 @@
 package com.leeup.algorithm.leetcode;
 
-import java.util.Arrays;
-import java.util.stream.Collectors;
-
 /**
  * 两个列表的最小索引总和
  *

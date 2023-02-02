@@ -24,7 +24,7 @@ public class PlusOne {
 
         }
         //如果所有位都是进位，则长度+1
-        digits= new int[digits.length + 1];
+        digits = new int[digits.length + 1];
         digits[0] = 1;
         return digits;
     }

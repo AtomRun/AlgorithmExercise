@@ -8,6 +8,7 @@ package com.leeup.algorithm.leetcode;
  * @Version 1.0
  **/
 public class RelativeSortArray {
+
     public int[] relativeSortArray(int[] arr1, int[] arr2) {
         return new int[10];
     }

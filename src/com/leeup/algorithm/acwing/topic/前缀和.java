@@ -1,10 +1,8 @@
 package com.leeup.algorithm.acwing.topic;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 /**
  * @ClassName 前缀和
@@ -28,18 +26,17 @@ public class 前缀和 {
 
         String[] s2 = in.readLine().split(" ");
         for (int i = 1; i <= n; i++) {
-            a[i] = Integer.parseInt(s2[i-1]);
+            a[i] = Integer.parseInt(s2[i - 1]);
         }
         for (int i = 1; i <= n; i++) {
             s[i] = s[i - 1] + a[i];
         }
 
-
         while (m-- > 0) {
             String[] s3 = in.readLine().split(" ");
             int l = Integer.parseInt(s3[0]);
             int r = Integer.parseInt(s3[1]);
-            System.out.println(s[r] - s[l-1]);
+            System.out.println(s[r] - s[l - 1]);
         }
     }
 }

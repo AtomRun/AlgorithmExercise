@@ -14,39 +14,41 @@ public class MissingNumber {
 
 
     public static void main(String[] args) {
-        missingNumber2(new int[]{3,0,1});
+        missingNumber2(new int[]{3, 0, 1});
     }
 
 
     /**
      * math
+     *
      * @param nums
      * @return
      */
-    public static int missingNumber2(int[] nums){
+    public static int missingNumber2(int[] nums) {
         int sum = 0;
-        int total = (nums.length * (nums.length+1))/2;
+        int total = (nums.length * (nums.length + 1)) / 2;
         for (int i = 0; i < nums.length; i++) {
-            sum+=nums[i];
+            sum += nums[i];
         }
-        if (sum!=total){
-            return total-sum;
+        if (sum != total) {
+            return total - sum;
         }
         return 0;
     }
 
     /**
      * HashSet
+     *
      * @param nums
      * @return
      */
-    public int missingNumber1(int[] nums){
+    public int missingNumber1(int[] nums) {
         HashSet set = new HashSet();
-        for (int num:nums){
+        for (int num : nums) {
             set.add(num);
         }
         for (int i = 0; i < nums.length; i++) {
-            if (!set.contains(i)){
+            if (!set.contains(i)) {
                 return i;
             }
         }
@@ -55,6 +57,7 @@ public class MissingNumber {
 
     /**
      * 排序法 O(Nlogn)
+     *
      * @param nums
      * @return
      */
@@ -63,12 +66,12 @@ public class MissingNumber {
         Arrays.sort(nums);
         int last = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != i){
+            if (nums[i] != i) {
                 return i;
             }
             last = i;
         }
-        return last+1;
+        return last + 1;
     }
 
 }

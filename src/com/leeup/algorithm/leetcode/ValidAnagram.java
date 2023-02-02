@@ -25,6 +25,6 @@ public class ValidAnagram {
         char[] ArrayT = t.toCharArray();
         Arrays.sort(ArrayS);
         Arrays.sort(ArrayT);
-        return Arrays.equals(ArrayS,ArrayT);
+        return Arrays.equals(ArrayS, ArrayT);
     }
 }

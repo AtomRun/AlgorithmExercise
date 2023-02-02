@@ -8,4 +8,5 @@ package com.leeup.algorithm.leetcode;
  * @Version 1.0
  **/
 public class MinimumOperationsToReduceXToZero {
+
 }

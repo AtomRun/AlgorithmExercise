@@ -8,6 +8,7 @@ package com.leeup.algorithm.acwing.topic;
  * @Version 1.0
  **/
 class ListNode {
+
     int val;
     ListNode next;
 

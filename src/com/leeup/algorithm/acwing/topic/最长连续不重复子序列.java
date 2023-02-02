@@ -14,10 +14,10 @@ public class 最长连续不重复子序列 {
     }
 
     //暴力方式
-    public int get(String str){
+    public int get(String str) {
         for (int i = 0; i < str.length(); i++) {
             for (int j = 0; j <= i; j++) {
-                
+
             }
         }
         return 0;

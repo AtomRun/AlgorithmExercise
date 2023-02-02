@@ -1,7 +1,5 @@
 package com.leeup.algorithm.leetcode;
 
-import sun.reflect.generics.tree.Tree;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -14,15 +12,16 @@ import java.util.Stack;
  * @Version 1.0
  **/
 public class 二叉树的迭代遍历 {
-    public List<Integer> IteratorTreeElement(TreeNode root){
+
+    public List<Integer> IteratorTreeElement(TreeNode root) {
         Stack<Integer> stack = new Stack<>();
         List<Integer> result = new ArrayList<>();
-        if (root==null){
+        if (root == null) {
             return result;
         }
         //前序遍历,先放root
         stack.push(root.val);
-        while (stack!=null){
+        while (stack != null) {
             result.add(stack.peek());
             stack.pop();
             //result.add(root)

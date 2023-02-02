@@ -1,7 +1,5 @@
 package com.leeup.algorithm.acwing.template.doublepoiter;
 
-import java.util.Arrays;
-
 /**
  * @ClassName SoutString
  * @Description TODO

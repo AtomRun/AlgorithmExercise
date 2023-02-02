@@ -14,14 +14,14 @@ public class HashMapTest {
 
     public static void main(String[] args) {
         HashMap hashMap = new HashMap();
-        hashMap.put("","");
-        hashMap.put(null,"asdasd");
-        hashMap.put(null,"12453");
+        hashMap.put("", "");
+        hashMap.put(null, "asdasd");
+        hashMap.put(null, "12453");
 
         System.out.println(hashMap.get(null));
 
         Hashtable hashtable = new Hashtable();
-        hashtable.put(null,"Asdasd");
-        hashtable.put("asdasd",null);
+        hashtable.put(null, "Asdasd");
+        hashtable.put("asdasd", null);
     }
 }

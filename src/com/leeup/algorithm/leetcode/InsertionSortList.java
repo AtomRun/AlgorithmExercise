@@ -14,6 +14,7 @@ public class InsertionSortList {
     }
 
     class ListNode {
+
         int val;
         ListNode next;
 

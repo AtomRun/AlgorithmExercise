@@ -13,32 +13,34 @@ public class PopulatingNextRightPointersInEachNode {
 
     //递归
     public Node connect1(Node root) {
-        if (root==null){
+        if (root == null) {
             return null;
         }
-        connectNode(root.left,root.left);
+        connectNode(root.left, root.left);
         return root;
     }
 
-    void connectNode(Node node1,Node node2){
-        if(node1==null || node2==null){
+    void connectNode(Node node1, Node node2) {
+        if (node1 == null || node2 == null) {
             return;
         }
         node1.next = node2;
-        connectNode(node1.left,node1.right);
-        connectNode(node2.left,node2.right);
-        connectNode(node1.right,node2.left);
+        connectNode(node1.left, node1.right);
+        connectNode(node2.left, node2.right);
+        connectNode(node1.right, node2.left);
     }
 }
 
 
 class Node {
+
     public int val;
     public Node left;
     public Node right;
     public Node next;
 
-    public Node() {}
+    public Node() {
+    }
 
     public Node(int _val) {
         val = _val;
@@ -50,4 +52,4 @@ class Node {
         right = _right;
         next = _next;
     }
-};
+}

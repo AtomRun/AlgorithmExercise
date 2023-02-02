@@ -18,11 +18,11 @@ public class combinationSumIII {
     Deque<Integer> path = new ArrayDeque<>();
 
     public List<List<Integer>> combinationSum3(int k, int n) {
-        backTracking(n,k,0,1);
+        backTracking(n, k, 0, 1);
         return result;
     }
 
-    public void backTracking(int targetNum, int k,int sum,int startIndex) {
+    public void backTracking(int targetNum, int k, int sum, int startIndex) {
         if (path.size() == k) {
             if (sum == targetNum) {
                 result.add(new ArrayList<>(path));
@@ -32,7 +32,7 @@ public class combinationSumIII {
         for (int i = startIndex; i <= 9; i++) {
             sum += i;
             path.push(i);
-            backTracking(targetNum, k , sum,i + 1);
+            backTracking(targetNum, k, sum, i + 1);
             sum -= i;
             path.pop();
         }

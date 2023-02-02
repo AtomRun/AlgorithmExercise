@@ -20,10 +20,10 @@ public class binaryGap {
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i++) {
             System.out.println(chars[i]);
-            char aChar =chars[i];
-            char test ='1';
-            if (aChar==test){
-                time+=1;
+            char aChar = chars[i];
+            char test = '1';
+            if (aChar == test) {
+                time += 1;
             }
         }
         return time;

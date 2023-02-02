@@ -1,6 +1,5 @@
 package com.leeup.algorithm.leetcode;
 
-import java.util.Arrays;
 import java.util.HashSet;
 
 /**

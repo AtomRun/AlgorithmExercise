@@ -10,9 +10,8 @@ package com.leeup.algorithm.leetcode;
 public class HouseRobber {
 
     public static void main(String[] args) {
-        System.out.println(rob(new int[] {2, 7, 9, 3, 1}));
+        System.out.println(rob(new int[]{2, 7, 9, 3, 1}));
     }
-
 
 
     //太直白的傻逼做法~，其实漏洞百出，太单纯了
@@ -22,13 +21,13 @@ public class HouseRobber {
         int twoMax = 0;
 
         for (int i = 0; i < nums.length; i++) {
-            if (i%2==0){
-                oneMax+=nums[i];
-            }else {
-                twoMax+=nums[i];
+            if (i % 2 == 0) {
+                oneMax += nums[i];
+            } else {
+                twoMax += nums[i];
             }
         }
-        return Math.max(oneMax,twoMax);
+        return Math.max(oneMax, twoMax);
     }
 
 }
